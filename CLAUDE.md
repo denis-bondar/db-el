@@ -8,8 +8,8 @@ Static site for Greek language lecture notes (Греческий язык — К
 
 ## Architecture
 
-- **`index.html`** — Single-page app with collapsible sections. Self-contained: all CSS and JS are inline (no build step, no dependencies). Supports light/dark mode via `prefers-color-scheme`. Content is organized into expandable `<details>` sections.
-- **`C:\Data\Src\learn-lang\lecture notes.md`** — Source material for the lectures in Markdown format (lives in a separate repo, not in db-el). The HTML page is generated/structured from this content.
+- **`index.html`** — Single-page app with collapsible sections. Self-contained: all CSS and JS are inline (no build step, no dependencies). Supports light/dark mode via `prefers-color-scheme`. Content is organized into expandable `<details>` sections. The HTML is an editorially condensed version of the markdown (transliterations removed, text shortened, sections restructured/split, some detailed tables expanded with stress rules).
+- **`lecture notes.md`** — Copy of the source material from `C:\Data\Src\learn-lang\lecture notes.md`, kept here for change tracking. When updating the HTML, read from this file. The source of truth is the learn-lang repo; copy it here before updating.
 - **`favicon.svg`** — SVG favicon (Greek Sigma on blue background).
 
 ## Development
