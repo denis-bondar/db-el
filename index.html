@@ -47,6 +47,19 @@
     margin-bottom: 12px;
     overflow: hidden;
   }
+  details.group {
+    background: transparent;
+    border: none;
+    overflow: visible;
+  }
+  details.group > summary {
+    font-size: 1.35em;
+    color: var(--accent);
+    padding: 16px 0 8px;
+  }
+  details.group > .group-content {
+    padding: 0;
+  }
   summary {
     padding: 14px 20px;
     font-size: 1.15em;
@@ -60,6 +73,7 @@
     transition: background 0.2s;
   }
   summary:hover { background: var(--border); }
+  details.group > summary:hover { background: transparent; opacity: 0.8; }
   summary::before {
     content: '\25B6';
     font-size: 0.7em;
@@ -118,7 +132,7 @@
 
 <div class="expand-controls">
   <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Раскрыть все</button>
-  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Свернуть все</button>
+  <button onclick="document.querySelectorAll('details:not(.group)').forEach(d=>d.open=false)">Свернуть все</button>
 </div>
 
 <!-- 1. Греческий алфавит -->
@@ -142,6 +156,11 @@
 </table>
 </div>
 </details>
+
+<!-- Существительные -->
+<details class="group" open>
+<summary>Существительные</summary>
+<div class="group-content">
 
 <!-- 2. Формы личных местоимений -->
 <details>
@@ -373,6 +392,14 @@
 </div>
 </details>
 
+</div>
+</details>
+
+<!-- Глаголы -->
+<details class="group" open>
+<summary>Глаголы</summary>
+<div class="group-content">
+
 <!-- 11. Группы глаголов -->
 <details>
 <summary>Группы глаголов</summary>
@@ -532,6 +559,9 @@
 <tr><td>μιλάω (говорить)</td><td>θα μιλάω</td><td>θα μιλήσω</td></tr>
 <tr><td>ρωτάω (спрашивать)</td><td>θα ρωτάω</td><td>θα ρωτήσω</td></tr>
 </table>
+</div>
+</details>
+
 </div>
 </details>
 
