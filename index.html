@@ -97,6 +97,13 @@
     margin: 12px 0;
     font-size: 0.95em;
   }
+  .split-tables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .split-tables table { margin: 0; }
   th, td {
     border: 1px solid var(--border);
     padding: 8px 12px;
@@ -139,21 +146,38 @@
 <details>
 <summary>Греческий алфавит</summary>
 <div class="content">
+<div class="split-tables">
 <table>
-<tr><th>Буква</th><th>Греческое название</th><th>Русское название</th><th></th><th>Буква</th><th>Греческое название</th><th>Русское название</th></tr>
-<tr><td>Α α</td><td>άλφα</td><td>альфа</td><td></td><td>Ν ν</td><td>νι</td><td>ни</td></tr>
-<tr><td>Β β</td><td>βήτα</td><td>вита</td><td></td><td>Ξ ξ</td><td>ξι</td><td>кси</td></tr>
-<tr><td>Γ γ</td><td>γάμμα</td><td>гамма</td><td></td><td>Ο ο</td><td>όμικρον</td><td>омикрон</td></tr>
-<tr><td>Δ δ</td><td>δέλτα</td><td>дельта</td><td></td><td>Π π</td><td>πι</td><td>пи</td></tr>
-<tr><td>Ε ε</td><td>έψιλον</td><td>эпсилон</td><td></td><td>Ρ ρ</td><td>ρο</td><td>ро</td></tr>
-<tr><td>Ζ ζ</td><td>ζήτα</td><td>зита</td><td></td><td>Σ σ ς</td><td>σίγμα</td><td>сигма</td></tr>
-<tr><td>Η η</td><td>ήτα</td><td>ита</td><td></td><td>Τ τ</td><td>ταυ</td><td>таф</td></tr>
-<tr><td>Θ θ</td><td>θήτα</td><td>фита</td><td></td><td>Υ υ</td><td>ύψιλον</td><td>ипсилон</td></tr>
-<tr><td>Ι ι</td><td>γιώτα</td><td>йота</td><td></td><td>Φ φ</td><td>φι</td><td>фи</td></tr>
-<tr><td>Κ κ</td><td>κάππα</td><td>каппа</td><td></td><td>Χ χ</td><td>χι</td><td>хи</td></tr>
-<tr><td>Λ λ</td><td>λάμδα</td><td>ламда</td><td></td><td>Ψ ψ</td><td>ψι</td><td>пси</td></tr>
-<tr><td>Μ μ</td><td>μι</td><td>ми</td><td></td><td>Ω ω</td><td>ωμέγα</td><td>омега</td></tr>
+<tr><th>Буква</th><th>Греческое</th><th>Русское</th></tr>
+<tr><td>Α α</td><td>άλφα</td><td>альфа</td></tr>
+<tr><td>Β β</td><td>βήτα</td><td>вита</td></tr>
+<tr><td>Γ γ</td><td>γάμμα</td><td>гамма</td></tr>
+<tr><td>Δ δ</td><td>δέλτα</td><td>дельта</td></tr>
+<tr><td>Ε ε</td><td>έψιλον</td><td>эпсилон</td></tr>
+<tr><td>Ζ ζ</td><td>ζήτα</td><td>зита</td></tr>
+<tr><td>Η η</td><td>ήτα</td><td>ита</td></tr>
+<tr><td>Θ θ</td><td>θήτα</td><td>фита</td></tr>
+<tr><td>Ι ι</td><td>γιώτα</td><td>йота</td></tr>
+<tr><td>Κ κ</td><td>κάππα</td><td>каппа</td></tr>
+<tr><td>Λ λ</td><td>λάμδα</td><td>ламда</td></tr>
+<tr><td>Μ μ</td><td>μι</td><td>ми</td></tr>
 </table>
+<table>
+<tr><th>Буква</th><th>Греческое</th><th>Русское</th></tr>
+<tr><td>Ν ν</td><td>νι</td><td>ни</td></tr>
+<tr><td>Ξ ξ</td><td>ξι</td><td>кси</td></tr>
+<tr><td>Ο ο</td><td>όμικρον</td><td>омикрон</td></tr>
+<tr><td>Π π</td><td>πι</td><td>пи</td></tr>
+<tr><td>Ρ ρ</td><td>ρο</td><td>ро</td></tr>
+<tr><td>Σ σ ς</td><td>σίγμα</td><td>сигма</td></tr>
+<tr><td>Τ τ</td><td>ταυ</td><td>таф</td></tr>
+<tr><td>Υ υ</td><td>ύψιλον</td><td>ипсилон</td></tr>
+<tr><td>Φ φ</td><td>φι</td><td>фи</td></tr>
+<tr><td>Χ χ</td><td>χι</td><td>хи</td></tr>
+<tr><td>Ψ ψ</td><td>ψι</td><td>пси</td></tr>
+<tr><td>Ω ω</td><td>ωμέγα</td><td>омега</td></tr>
+</table>
+</div>
 </div>
 </details>
 
@@ -166,14 +190,24 @@
 <details>
 <summary>Формы личных местоимений в именительном падеже</summary>
 <div class="content">
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Единственное ч.</th><th colspan="2">Множественное ч.</th></tr>
-<tr><td>εγώ</td><td>я</td><td>εμείς</td><td>мы</td></tr>
-<tr><td>εσύ</td><td>ты</td><td>εσείς</td><td>вы</td></tr>
-<tr><td>αυτός</td><td>он</td><td>αυτοί</td><td>они (м. р.)</td></tr>
-<tr><td>αυτή</td><td>она</td><td>αυτές</td><td>они (ж. р.)</td></tr>
-<tr><td>αυτό</td><td>оно</td><td>αυτά</td><td>они (ср. р.)</td></tr>
+<tr><th colspan="2">Единственное ч.</th></tr>
+<tr><td>εγώ</td><td>я</td></tr>
+<tr><td>εσύ</td><td>ты</td></tr>
+<tr><td>αυτός</td><td>он</td></tr>
+<tr><td>αυτή</td><td>она</td></tr>
+<tr><td>αυτό</td><td>оно</td></tr>
 </table>
+<table>
+<tr><th colspan="2">Множественное ч.</th></tr>
+<tr><td>εμείς</td><td>мы</td></tr>
+<tr><td>εσείς</td><td>вы</td></tr>
+<tr><td>αυτοί</td><td>они (м. р.)</td></tr>
+<tr><td>αυτές</td><td>они (ж. р.)</td></tr>
+<tr><td>αυτά</td><td>они (ср. р.)</td></tr>
+</table>
+</div>
 </div>
 </details>
 
@@ -195,12 +229,25 @@
 <summary>Именительный падеж единственного числа</summary>
 <div class="content">
 <p>Существительные мужского рода на -ος, -ης, -ας, женского рода на -α, -η, среднего рода на -ο, -ι, -μα</p>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>ο δάσκαλ<b>ος</b> — учитель</td><td>на <b>-α</b></td><td>η γυναίκ<b>α</b> — женщина, жена</td><td>на <b>-ο</b></td><td>το σχολεί<b>ο</b> — школа</td></tr>
-<tr><td>на <b>-ης</b></td><td>ο φοιτητ<b>ής</b> — студент</td><td>на <b>-η</b></td><td>η βιβλιοθήκ<b>η</b> — библиотека</td><td>на <b>-ι</b></td><td>το παιδ<b>ί</b> — ребенок</td></tr>
-<tr><td>на <b>-ας</b></td><td>ο άντρ<b>ας</b> — мужчина, муж</td><td></td><td></td><td>на <b>-μα</b></td><td>το γρά<b>μμα</b> — письмо</td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>ο δάσκαλ<b>ος</b> — учитель</td></tr>
+<tr><td>на <b>-ης</b></td><td>ο φοιτητ<b>ής</b> — студент</td></tr>
+<tr><td>на <b>-ας</b></td><td>ο άντρ<b>ας</b> — мужчина, муж</td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>η γυναίκ<b>α</b> — женщина, жена</td></tr>
+<tr><td>на <b>-η</b></td><td>η βιβλιοθήκ<b>η</b> — библиотека</td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>το σχολεί<b>ο</b> — школа</td></tr>
+<tr><td>на <b>-ι</b></td><td>το παιδ<b>ί</b> — ребенок</td></tr>
+<tr><td>на <b>-μα</b></td><td>το γρά<b>μμα</b> — письмо</td></tr>
+</table>
+</div>
 </div>
 </details>
 
@@ -216,12 +263,25 @@
 <p>Мужской род — отбрасываем последнее <b>ς</b>.</p>
 <p>Женский, средний род не изменяются.</p>
 <h3>Таблица</h3>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>τον δάσκαλ<b>ο</b></td><td>на <b>-α</b></td><td>την γυναίκ<b>α</b></td><td>на <b>-ο</b></td><td>το σχολεί<b>ο</b></td></tr>
-<tr><td>на <b>-ης</b></td><td>τον φοιτητ<b>ή</b></td><td>на <b>-η</b></td><td>την βιβλιοθήκ<b>η</b></td><td>на <b>-ι</b></td><td>το παιδ<b>ί</b></td></tr>
-<tr><td>на <b>-ας</b></td><td>τον άντρ<b>α</b></td><td></td><td></td><td>на <b>-μα</b></td><td>το γρά<b>μμα</b></td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>τον δάσκαλ<b>ο</b></td></tr>
+<tr><td>на <b>-ης</b></td><td>τον φοιτητ<b>ή</b></td></tr>
+<tr><td>на <b>-ας</b></td><td>τον άντρ<b>α</b></td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>την γυναίκ<b>α</b></td></tr>
+<tr><td>на <b>-η</b></td><td>την βιβλιοθήκ<b>η</b></td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>το σχολεί<b>ο</b></td></tr>
+<tr><td>на <b>-ι</b></td><td>το παιδ<b>ί</b></td></tr>
+<tr><td>на <b>-μα</b></td><td>το γρά<b>μμα</b></td></tr>
+</table>
+</div>
 <h3>Примеры</h3>
 <ul>
 <li>Βλέπω <b>τον δάσκαλο</b> — Я вижу учителя</li>
@@ -264,13 +324,20 @@
 <details>
 <summary>Притяжательные местоимения</summary>
 <div class="content">
+<div class="split-tables">
 <table>
-<tr><td>μου</td><td>мой, моя, мое и т. д.</td><td>μας</td><td>наш, наша и т. д.</td></tr>
-<tr><td>σου</td><td>твой, твоя и т. д.</td><td>σας</td><td>ваш, ваша и т. д.</td></tr>
-<tr><td>του</td><td>его</td><td>τους</td><td>их</td></tr>
-<tr><td>της</td><td>ее</td><td></td><td></td></tr>
-<tr><td>του</td><td>его</td><td></td><td></td></tr>
+<tr><td>μου</td><td>мой, моя, мое и т. д.</td></tr>
+<tr><td>σου</td><td>твой, твоя и т. д.</td></tr>
+<tr><td>του</td><td>его</td></tr>
+<tr><td>της</td><td>ее</td></tr>
+<tr><td>του</td><td>его</td></tr>
 </table>
+<table>
+<tr><td>μας</td><td>наш, наша и т. д.</td></tr>
+<tr><td>σας</td><td>ваш, ваша и т. д.</td></tr>
+<tr><td>τους</td><td>их</td></tr>
+</table>
+</div>
 <p>Притяжательные местоимения не изменяются по падежам и родам и не зависят от рода согласованного с ними существительного. Они ставятся после существительного, не несут ударения и произносятся слитно с существительным:</p>
 <ul>
 <li>ο κήπος μου — мой сад</li>
@@ -294,12 +361,25 @@
 <p>Мужской род: <b>-ος</b> → <b>-οι</b></p>
 <p>Остальные мужской род и все женский → <b>-ές</b></p>
 <p>Средний род → <b>-α</b>, <b>-μα</b> → <b>-μματα</b>.</p>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>οι δάσκαλ<b>οι</b></td><td>на <b>-α</b></td><td>οι γυναίκ<b>ες</b></td><td>на <b>-ο</b></td><td>τα σχολεί<b>α</b></td></tr>
-<tr><td>на <b>-ης</b></td><td>οι φοιτητ<b>ές</b></td><td>на <b>-η</b></td><td>οι βιβλιοθήκ<b>ες</b></td><td>на <b>-ι</b></td><td>τα παιδι<b>ά</b></td></tr>
-<tr><td>на <b>-ας</b></td><td>οι άντρ<b>ες</b></td><td></td><td></td><td>на <b>-μα</b></td><td>τα γρά<b>μματα</b></td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>οι δάσκαλ<b>οι</b></td></tr>
+<tr><td>на <b>-ης</b></td><td>οι φοιτητ<b>ές</b></td></tr>
+<tr><td>на <b>-ας</b></td><td>οι άντρ<b>ες</b></td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>οι γυναίκ<b>ες</b></td></tr>
+<tr><td>на <b>-η</b></td><td>οι βιβλιοθήκ<b>ες</b></td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>τα σχολεί<b>α</b></td></tr>
+<tr><td>на <b>-ι</b></td><td>τα παιδι<b>ά</b></td></tr>
+<tr><td>на <b>-μα</b></td><td>τα γρά<b>μματα</b></td></tr>
+</table>
+</div>
 </div>
 </details>
 
@@ -312,12 +392,25 @@
 <h3>Окончания</h3>
 <p>Совпадают с именительным падежом множественного числа, кроме мужского рода с окончанием на <b>-ος</b>.</p>
 <p><b>-ος</b> → <b>-ους</b>, остальные муж, жен → <b>-ές</b>, средний: <b>-α</b>, <b>-μα</b> → <b>-μματα</b>.</p>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>τους δασκάλ<b>ους</b></td><td>на <b>-α</b></td><td>τις γυναίκ<b>ες</b></td><td>на <b>-ο</b></td><td>τα σχολεί<b>α</b></td></tr>
-<tr><td>на <b>-ης</b></td><td>τους φοιτητ<b>ές</b></td><td>на <b>-η</b></td><td>τις βιβλιοθήκ<b>ες</b></td><td>на <b>-ι</b></td><td>τα παιδι<b>ά</b></td></tr>
-<tr><td>на <b>-ας</b></td><td>τους άντρ<b>ες</b></td><td></td><td></td><td>на <b>-μα</b></td><td>τα γρά<b>μματα</b></td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>τους δασκάλ<b>ους</b></td></tr>
+<tr><td>на <b>-ης</b></td><td>τους φοιτητ<b>ές</b></td></tr>
+<tr><td>на <b>-ας</b></td><td>τους άντρ<b>ες</b></td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>τις γυναίκ<b>ες</b></td></tr>
+<tr><td>на <b>-η</b></td><td>τις βιβλιοθήκ<b>ες</b></td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>τα σχολεί<b>α</b></td></tr>
+<tr><td>на <b>-ι</b></td><td>τα παιδι<b>ά</b></td></tr>
+<tr><td>на <b>-μα</b></td><td>τα γρά<b>μματα</b></td></tr>
+</table>
+</div>
 <h3>Примеры</h3>
 <ul>
 <li>Βλέπω <b>τους δασκάλους</b> — Я вижу учителей</li>
@@ -351,20 +444,46 @@
 <tr><td>Средний</td><td>του</td><td>των</td><td>ενός</td></tr>
 </table>
 <h3>Окончания единственного числа существительных</h3>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>του δασκάλ<b>ου</b></td><td>на <b>-α</b></td><td>της γυναίκ<b>ας</b></td><td>на <b>-ο</b></td><td>του σχολεί<b>ου</b></td></tr>
-<tr><td>на <b>-ης</b></td><td>του φοιτητ<b>ή</b></td><td>на <b>-η</b></td><td>της βιβλιοθήκ<b>ης</b></td><td>на <b>-ι</b></td><td>του παιδι<b>ού</b></td></tr>
-<tr><td>на <b>-ας</b></td><td>του άντρ<b>α</b></td><td></td><td></td><td>на <b>-μα</b></td><td>του γρά<b>μματος</b></td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>του δασκάλ<b>ου</b></td></tr>
+<tr><td>на <b>-ης</b></td><td>του φοιτητ<b>ή</b></td></tr>
+<tr><td>на <b>-ας</b></td><td>του άντρ<b>α</b></td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>της γυναίκ<b>ας</b></td></tr>
+<tr><td>на <b>-η</b></td><td>της βιβλιοθήκ<b>ης</b></td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>του σχολεί<b>ου</b></td></tr>
+<tr><td>на <b>-ι</b></td><td>του παιδι<b>ού</b></td></tr>
+<tr><td>на <b>-μα</b></td><td>του γρά<b>μματος</b></td></tr>
+</table>
+</div>
 <h3>Окончания множественного числа существительных</h3>
 <p>Внимание на ударения!</p>
+<div class="split-tables">
 <table>
-<tr><th colspan="2">Мужской род</th><th colspan="2">Женский род</th><th colspan="2">Средний род</th></tr>
-<tr><td>на <b>-ος</b></td><td>των δασκάλ<b>ων</b></td><td>на <b>-α</b></td><td>των γυναικ<b>ών</b></td><td>на <b>-ο</b></td><td>των σχολεί<b>ων</b></td></tr>
-<tr><td>на <b>-ης</b></td><td>των φοιτητ<b>ών</b></td><td>на <b>-η</b></td><td>των βιβλιοθηκ<b>ών</b></td><td>на <b>-ι</b></td><td>των παιδι<b>ών</b></td></tr>
-<tr><td>на <b>-ας</b></td><td>των αντρ<b>ών</b></td><td></td><td></td><td>на <b>-μα</b></td><td>των γραμ<b>μάτων</b></td></tr>
+<tr><th colspan="2">Мужской род</th></tr>
+<tr><td>на <b>-ος</b></td><td>των δασκάλ<b>ων</b></td></tr>
+<tr><td>на <b>-ης</b></td><td>των φοιτητ<b>ών</b></td></tr>
+<tr><td>на <b>-ας</b></td><td>των αντρ<b>ών</b></td></tr>
 </table>
+<table>
+<tr><th colspan="2">Женский род</th></tr>
+<tr><td>на <b>-α</b></td><td>των γυναικ<b>ών</b></td></tr>
+<tr><td>на <b>-η</b></td><td>των βιβλιοθηκ<b>ών</b></td></tr>
+</table>
+<table>
+<tr><th colspan="2">Средний род</th></tr>
+<tr><td>на <b>-ο</b></td><td>των σχολεί<b>ων</b></td></tr>
+<tr><td>на <b>-ι</b></td><td>των παιδι<b>ών</b></td></tr>
+<tr><td>на <b>-μα</b></td><td>των γραμ<b>μάτων</b></td></tr>
+</table>
+</div>
 <h3>В каких случаях употребляется родительный падеж?</h3>
 <p>Между двумя существительными.</p>
 <p>Во-первых, чтобы показать принадлежность (ответ на вопрос «чье?»): το σπίτι του πατέρα μου — дом моего отца, η τσάντα της μητέρας μου — сумка моей матери.</p>
@@ -416,15 +535,35 @@
 <details>
 <summary>Настоящее время: окончания и примеры</summary>
 <div class="content">
+<div class="split-tables">
 <table>
-<tr><th>Лицо</th><th>Оконч. Α</th><th>βλέπω</th><th>Оконч. Β1</th><th>μιλάω</th><th>Оконч. Β2</th><th>οδηγώ</th></tr>
-<tr><td>Εγώ</td><td>-<b>ω</b></td><td>βλέπ<b>ω</b></td><td>-<b>άω</b></td><td>μιλ<b>άω</b></td><td>-<b>ώ</b></td><td>οδηγ<b>ώ</b></td></tr>
-<tr><td>Εσύ</td><td>-<b>εις</b></td><td>βλέπ<b>εις</b></td><td>-<b>άς</b></td><td>μιλ<b>άς</b></td><td>-<b>είς</b></td><td>οδηγ<b>είς</b></td></tr>
-<tr><td>Αυτός/ή/ό</td><td>-<b>ει</b></td><td>βλέπ<b>ει</b></td><td>-<b>άει</b></td><td>μιλ<b>άει</b></td><td>-<b>εί</b></td><td>οδηγ<b>εί</b></td></tr>
-<tr><td>Εμείς</td><td>-<b>ουμε</b></td><td>βλέπ<b>ουμε</b></td><td>-<b>άμε</b></td><td>μιλ<b>άμε</b></td><td>-<b>ούμε</b></td><td>οδηγ<b>ούμε</b></td></tr>
-<tr><td>Εσείς</td><td>-<b>ετε</b></td><td>βλέπ<b>ετε</b></td><td>-<b>άτε</b></td><td>μιλ<b>άτε</b></td><td>-<b>είτε</b></td><td>οδηγ<b>είτε</b></td></tr>
-<tr><td>Αυτοί/ές/ά</td><td>-<b>ουν</b></td><td>βλέπ<b>ουν</b></td><td>-<b>άνε</b></td><td>μιλ<b>άνε</b></td><td>-<b>ούν</b></td><td>οδηγ<b>ούν</b></td></tr>
+<tr><th>Лицо</th><th>Оконч. Α</th><th>βλέπω</th></tr>
+<tr><td>Εγώ</td><td>-<b>ω</b></td><td>βλέπ<b>ω</b></td></tr>
+<tr><td>Εσύ</td><td>-<b>εις</b></td><td>βλέπ<b>εις</b></td></tr>
+<tr><td>Αυτός/ή/ό</td><td>-<b>ει</b></td><td>βλέπ<b>ει</b></td></tr>
+<tr><td>Εμείς</td><td>-<b>ουμε</b></td><td>βλέπ<b>ουμε</b></td></tr>
+<tr><td>Εσείς</td><td>-<b>ετε</b></td><td>βλέπ<b>ετε</b></td></tr>
+<tr><td>Αυτοί/ές/ά</td><td>-<b>ουν</b></td><td>βλέπ<b>ουν</b></td></tr>
 </table>
+<table>
+<tr><th>Лицо</th><th>Оконч. Β1</th><th>μιλάω</th></tr>
+<tr><td>Εγώ</td><td>-<b>άω</b></td><td>μιλ<b>άω</b></td></tr>
+<tr><td>Εσύ</td><td>-<b>άς</b></td><td>μιλ<b>άς</b></td></tr>
+<tr><td>Αυτός/ή/ό</td><td>-<b>άει</b></td><td>μιλ<b>άει</b></td></tr>
+<tr><td>Εμείς</td><td>-<b>άμε</b></td><td>μιλ<b>άμε</b></td></tr>
+<tr><td>Εσείς</td><td>-<b>άτε</b></td><td>μιλ<b>άτε</b></td></tr>
+<tr><td>Αυτοί/ές/ά</td><td>-<b>άνε</b></td><td>μιλ<b>άνε</b></td></tr>
+</table>
+<table>
+<tr><th>Лицо</th><th>Оконч. Β2</th><th>οδηγώ</th></tr>
+<tr><td>Εγώ</td><td>-<b>ώ</b></td><td>οδηγ<b>ώ</b></td></tr>
+<tr><td>Εσύ</td><td>-<b>είς</b></td><td>οδηγ<b>είς</b></td></tr>
+<tr><td>Αυτός/ή/ό</td><td>-<b>εί</b></td><td>οδηγ<b>εί</b></td></tr>
+<tr><td>Εμείς</td><td>-<b>ούμε</b></td><td>οδηγ<b>ούμε</b></td></tr>
+<tr><td>Εσείς</td><td>-<b>είτε</b></td><td>οδηγ<b>είτε</b></td></tr>
+<tr><td>Αυτοί/ές/ά</td><td>-<b>ούν</b></td><td>οδηγ<b>ούν</b></td></tr>
+</table>
+</div>
 </div>
 </details>
 
