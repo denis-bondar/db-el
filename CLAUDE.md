@@ -16,7 +16,7 @@ Static site for Greek language lecture notes (Греческий язык — К
 
 When the user says "обнови" / "update", run these steps **in this exact order**:
 
-1. **Update markdown first**: copy `lecture notes.md` from `C:\Data\Src\learn-lang\lecture notes.md` to this repo
+1. **Update markdown first**: copy `lecture notes.md` from `C:\Data\Knowledge Base\Learning\Greek\lecture notes.md` to this repo
 2. Diff the local copy against the previous version, then update `index.html` to match the new markdown content
 3. **Update `CLAUDE.md`** based on anything learned earlier in the current session (new conventions, decisions, structural changes)
 4. **Deploy to Vercel**: `npx vercel --prod --yes` (auto-deploy from GitHub is not set up; manual deploy required via Vercel CLI)
